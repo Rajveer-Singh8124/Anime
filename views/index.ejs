@@ -1,0 +1,37 @@
+<%- include("partials/header"); -%>
+    <section class="searchform">
+        <h1>Anime</h1>
+        <form action="/" method="post">
+            <div class="select-box">
+                <input type="text" name="input" placeholder="Type to search" class="select-input">
+                <ul class="dropdown-list">
+                      <% titles.forEach((title)=>{ %>
+
+                                <button type="submit" class="option">
+                                    <%= title%>
+                                        <hr>
+                                </button>
+                                <% }) %>
+                </ul>
+            </div>
+
+        </form>
+    </section>
+
+
+    <div class="output">
+        <% rec.forEach((r)=>{ %>
+            <div class="col">
+
+                <div class="card">
+                    <img src="<%=r['img_url']%>" alt="<%=r['img_url']%>">
+                    <figcaption>
+                        <%=r["title"]%>
+                    </figcaption>
+
+
+                </div>
+            </div>
+            <%});%>
+    </div>
+    <%- include("partials/footer"); -%>

@@ -1,0 +1,14 @@
+<%- include("partials/header"); -%>
+    <div class="output">
+        <% animes.forEach((anime)=>{ %>
+            <div class="col">
+                <div class="card">
+                    <img src="<%=anime['img_url']%>" alt="<%=anime['img_url']%>">
+                    <figcaption>
+                        <%=anime["title"]%>
+                    </figcaption>
+                </div>
+            </div>
+            <%});%>
+    </div>
+    <%- include("partials/footer"); -%>
